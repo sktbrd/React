@@ -1,28 +1,30 @@
 import logo from './logo.svg';
 import './App.css';
 import HelloWorld from './components/HelloWorld';
-import Post from './components/Post'
 import HiveConnect from './components/HiveConnect';
 import Event from './components/Event'
 import Form from './components/Form'
+import Condition from './components/Condition'
+import List from './components/List';
 
 function App() {
 
   const hiveID = "hive-173115"
   
+  const items = [ 'React' , 'vue' , ' angular']
+
 
 
   return (
     <div className="App">
-      <h1> Skatehive Post Tool </h1>
+      <h1 className='App-logo'> Skatehive Post Tool </h1>
       <p> This is {hiveID}</p>
       < HelloWorld/>
-      < Post 
-        title= "title input"
-      />
-      <Form/>
+      < Form/>
       < Event/>
       < HiveConnect/> 
+      < Condition/>
+      < List itens = {items} />
 
     </div>
     
